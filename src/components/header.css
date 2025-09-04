@@ -1,0 +1,129 @@
+.link-hover:hover {
+    font-size: 22px;
+  color: #FFB921; /* exemplo de cor para hover */
+  transition: color 0.6s;
+}
+
+.header-container {
+  padding: 1rem;
+  background-color: #1b1a1a;
+  height: 100px;
+  margin: 0 40px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-link {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 50px;
+  height: 110px;
+  object-fit: contain;
+  padding-bottom: 18px;
+  padding-top: 1px;
+}
+
+.logo-text {
+  font-family: "serif";
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links {
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+.link-hover {
+  font-family: "serif";
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link-hover:hover {
+  color: #FFB921;
+  text-decoration: underline;
+}
+
+.header-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon-link {
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 0.7rem 0.7rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  margin-left: 1rem;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100vw;
+  background: #1b1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.mobile-link {
+  color: #fff;
+  font-size: 24px;
+  font-family: "serif";
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-link:hover {
+  color: #FFB921;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .header-container {
+    margin: 0 8px;
+    padding: 0.5rem;
+  }
+}

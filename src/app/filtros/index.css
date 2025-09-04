@@ -1,0 +1,153 @@
+body {
+    overflow-x: hidden;
+
+}
+
+
+.heroSection {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+h1 {
+    font-size: 54px;
+    font-family: 'serif';
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtituloHero {
+    font-size: 30px;
+    font-family: 'serif';
+    text-transform: uppercase;
+
+}
+
+.productSection {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    height: 90vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.productSectionImg {
+    width: 400px;
+    height: auto;
+}
+
+.productSectionTextBox {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    text-align: left;
+}
+
+.productSectionTitle {
+    font-size: 36px;
+    width: 100%;
+    text-align: flex-start;
+    font-family: 'serif';
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.productTitleVolume {
+    font-size: 24px;
+    text-transform: lowercase;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.productSectionDescription {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'serif';
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.productSectionButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 40%;
+    /* background-color: transparent; */
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    font-family: 'serif';
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.productSectionButton:hover {
+    background-color: #fff;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    height: auto;
+    padding: 32px 8px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .subtituloHero {
+    font-size: 18px;
+  }
+  .productSection {
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+    padding: 16px 0;
+  }
+  .productSectionImg {
+    width: 90vw;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .productSectionTextBox {
+    width: 90vw;
+    max-width: 340px;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0 8px;
+  }
+  .productSectionTitle {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .productTitleVolume {
+    font-size: 16px;
+    margin-left: 4px;
+  }
+  .productSectionDescription {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .productSectionButton {
+    font-size: 15px;
+    width: 100%;
+    align-self: stretch;
+    margin-bottom: 16px;
+  }
+}

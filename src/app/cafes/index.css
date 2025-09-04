@@ -1,0 +1,104 @@
+body {
+    overflow-x: hidden;
+
+}
+
+
+.heroSection {
+    width: 100%;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+h1 {
+    font-size: 54px;
+    font-family: 'serif';
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtituloHero {
+    font-size: 30px;
+    font-family: 'serif';
+
+}
+
+.productSection {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    height: 90vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.productSectionImg {
+    width: 500px;
+    height: auto;
+}
+
+.productSectionTextBox {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    text-align: left;
+}
+
+.productSectionTitle {
+    font-size: 36px;
+    width: 100%;
+    text-align: flex-start;
+    font-family: 'serif';
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.productTitleVolume {
+    font-size: 24px;
+    text-transform: lowercase;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.productSectionDescription {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'serif';
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.productSectionButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 40%;
+    /* background-color: transparent; */
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    font-family: 'serif';
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.productSectionButton:hover {
+    background-color: #fff;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
