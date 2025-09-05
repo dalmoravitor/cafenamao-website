@@ -1,0 +1,236 @@
+.container-principal {
+  width: 100%;
+  min-height: 100vh;
+  background: #1b1a1a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.card-pontos {
+  background: #222;
+  margin-top: 32px;
+  border-radius: 20px;
+  padding: 24px 40px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card-pontos h3 {
+  font-family: serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFB921;
+  margin: 0;
+}
+
+.container-conteudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 90%;
+  align-self: center;
+  
+}
+
+.container-conteudo-titulo {
+  font-size: 32px;
+  font-family: serif;
+  text-transform: uppercase;
+}
+
+.container-conta,
+.container-pedidos {
+  background: #222;
+  border-radius: 20px;
+  padding: 32px 28px;
+  height: 800px;
+  width: 100%;
+  min-height: 300px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  gap: 18px;
+}
+
+/* Responsivo para celular */
+@media (max-width: 900px) {
+  .container-conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 98vw;
+  }
+  .container-conta,
+  .container-pedidos {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 18px 8px;
+    margin-bottom: 16px;
+  }
+  .card-pontos {
+    width: 90%;
+    padding: 18px 8px;
+  }
+}
+
+h2 {
+  font-family: serif;
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+label {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  font-size: 18px;
+  margin-bottom: 16px;
+  width: 60%;
+  font-family: serif;
+}
+
+.conta-input {
+  width: 100%;
+align-self: center;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: #1b1a1a;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 6px;
+  outline: none;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+.conta-input:focus {
+  border: 1.5px solid #FFB921;
+}
+.informacoes {
+    width: 60%;
+  margin-top: 0;
+  text-align: left;
+  font-size: 18px;
+  font-family: serif;
+  text-transform: uppercase;
+}
+
+.botaoSalvar {
+  border-radius: 12px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  height: 50px;
+  margin-top: 16px;
+  width: 60%;
+  border: 3px solid #fff;
+  align-items: center;
+}
+
+.botaoSalvar:hover {
+  background-color: #FFB921;
+  border: 3px solid #000;
+  color: #1b1a1a;
+  transition: background-color 0.6s, color 0.6s;
+  cursor: pointer;
+}
+
+.pedido-card {
+  background: #333;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  width: 100%;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.pedido-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.pedido-id {
+  font-family: serif;
+  font-size: 14px;
+  color: rgb(195, 195, 195);
+  margin: 0;
+}
+
+.pedido-data {
+  font-family: serif;
+  font-size: 14px;
+  color: #FFB921;
+  margin: 0;
+}
+
+.pedido-produto {
+  font-family: serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0 0 0;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.pedido-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.pedido-status {
+  font-family: serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
+
+.pedido-total {
+  font-family: serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
+
+.pedido-card:hover {
+  background: #444;
+  transition: background 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .pedido-card {
+    padding: 14px 8px;
+    gap: 6px;
+  }
+  /* .pedido-card-header,
+  .pedido-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  } */
+}
