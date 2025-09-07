@@ -1,6 +1,8 @@
 "use client";
 import { Header } from "@/components/Header";
 import React, { useState } from "react";
+
+import Link from "next/link";
 import "./home.css";
 
 export default function Home() {
@@ -51,24 +53,24 @@ export default function Home() {
           Confira alguns de nossos <br /> produtos!
         </h2>
         <div className="home-products-list">
-          <a className="productCard" href="/produto/1">
+          <Link className="productCard" href="/produto/1">
             <img src="/cafeCaramelo.png" alt="Café Caramelo" />
             <p>
               Café em grãos 100% arábica com notas de frutas cítricas
             </p>
-          </a>
-          <a className="productCard" href="/produto/2">
+          </Link>
+          <Link className="productCard" href="/produto/2">
             <img src="/expresso.png" alt="Expresso" />
             <p>
               Copo de café sabor expresso sustentável e prático
             </p>
-          </a>
-          <a className="productCard" href="/produto/3">
+          </Link>
+          <Link className="productCard" href="/produto/3">
             <img src="/filtro1.png" alt="Filtro 1" />
             <p>
               Suporte para filtro 102 Biodegradável, feito com borra de café.
             </p>
-          </a>
+          </Link>
         </div>
       </section>
 

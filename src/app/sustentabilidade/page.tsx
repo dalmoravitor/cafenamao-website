@@ -40,7 +40,7 @@ export default function Sustentabilidade() {
           <Image src="/img3.png" alt="Muda sendo regada" width={600} height={180} />
         </div>
         <blockquote className="sustentabilidade-quote">
-          "DO CAFÉ AO FUTURO, ESPALHANDO RAÍZES QUE TRANSFORMAM."
+          &quot;DO CAFÉ AO FUTURO, ESPALHANDO RAÍZES QUE TRANSFORMAM.&quot;
         </blockquote>
       </main>
       <footer className="sustentabilidade-footer">
