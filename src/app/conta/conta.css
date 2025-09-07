@@ -22,14 +22,19 @@
   min-width: 220px;
   max-width: 800px;
   width: 100%;
+  gap: 40px;
 }
 
 .card-pontos h3 {
   font-family: serif;
   font-size: 24px;
   font-weight: bold;
-  color: #FFB921;
+  color: #fff;
   margin: 0;
+}
+
+.texto-destaque-card-pontos {
+  color: #FFB921;
 }
 
 .container-conteudo {
@@ -219,6 +224,26 @@ align-self: center;
 .pedido-card:hover {
   background: #444;
   transition: background 0.3s;
+}
+
+.botaoPontos {
+  border-radius: 12px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  height: 50px;
+  margin-top: 16px;
+  width: 200px;
+  border: 3px solid #fff;
+  align-items: center;
+}
+
+.botaoPontos:hover {
+  background-color: #FFB921;
+  border: 3px solid #000;
+  color: #1b1a1a;
+  transition: background-color 0.6s, color 0.6s;
+  cursor: pointer;
 }
 
 /* Responsivo */

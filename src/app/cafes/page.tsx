@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import './index.css'
+import Link from "next/link";
 
 export default function CoposPage() {
     return (
@@ -22,7 +23,9 @@ export default function CoposPage() {
                     <div className="productSectionTextBox">
                         <h2 className="productSectionTitle">café em grãos cacau <span className="productTitleVolume">250g</span></h2>
                         <p className="productSectionDescription">representa a união perfeita entre praticidade, qualidade e sabor. Desenvolvido para atender às necessidades do consumidor moderno, este copo inovador traz em seu interior um filtro integrado com café especialmente selecionado, enriquecido com notas marcantes de cacau.</p>
-                        <button className="productSectionButton">Ver produto</button>
+                        <Link style={{ width: '100%' }} href="/produto/5">
+                          <button className="productSectionButton">Ver produto</button>
+                        </Link>
                     </div>
 
 
@@ -38,7 +41,9 @@ export default function CoposPage() {
                     <div className="productSectionTextBox">
                         <h2 className="productSectionTitle">Café em grãos Frutas Cítricas <span className="productTitleVolume">250g</span></h2>
                         <p className="productSectionDescription">A harmonização do café com notas de frutas cítricas resulta em uma bebida leve, vibrante e revigorante, ideal para quem deseja um sabor diferenciado sem abrir mão da qualidade.</p>
-                        <button className="productSectionButton">Ver produto</button>
+                        <Link style={{ width: '100%' }} href="/produto/6">
+                          <button className="productSectionButton">Ver produto</button>
+                        </Link>
                     </div>
 
                     <img className="productSectionImg" src="/cafeFC.png" alt="" />
@@ -52,11 +57,17 @@ export default function CoposPage() {
                     <div  className="productSectionTextBox">
                         <h2 className="productSectionTitle">café em grãos caramelo <span className="productTitleVolume">180ml</span></h2>
                         <p className="productSectionDescription">Prático e sofisticado, basta adicionar água quente para desfrutar de toda a tradição do verdadeiro expresso, agora ao alcance das suas mãos.</p>
-                        <button className="productSectionButton">Ver produto</button>
+                        <Link style={{ width: '100%' }} href="/produto/1">
+                          <button className="productSectionButton">Ver produto</button>
+                        </Link>
                     </div>
                     
             </section>
 
+            <div style={{display: 'flex', justifyContent: 'center', gap: 16, margin: '32px 0'}}>
+              <Link href="/cart" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Ver carrinho</button></Link>
+              <Link href="/checkout" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Finalizar compra</button></Link>
+            </div>
             <footer className="bg-1b1a1a text-white py-4 border-t border-white">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8">
         {/* Logo */}

@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "nome": "Café Caramelo",
+    "descricao": "Café em grãos 100% arábica com notas de caramelo.",
+    "foto": "/cafeCaramelo.png",
+    "preco": 30.00,
+    "tipoDeProduto": "cafe",
+    "frase": "O sabor doce do caramelo para adoçar sua rotina."
+  },
+  {
+    "id": 2,
+    "nome": "Copo Expresso",
+    "descricao": "Copo de café sabor expresso sustentável e prático.",
+    "foto": "/expresso.png",
+    "tipoDeProduto": "copo",
+    "preco": 30.00,
+    "frase": "Praticidade e energia em um só gole, onde você estiver."
+  },
+  {
+    "id": 3,
+    "nome": "Filtro 102",
+    "descricao": "Suporte para filtro 102 biodegradável, feito com borra de café.",
+    "foto": "/filtro1.png",
+    "tipoDeProduto": "filtro",
+    "preco": 20.00,
+    "frase": "Filtre seu café com sustentabilidade e sabor."
+  },
+  {
+    "id": 4,
+    "nome": "Copo Frutas Cítricas",
+    "descricao": "Copo térmico reutilizável, mantém sua bebida quente por horas.",
+    "foto": "/copoFC.png",
+    "tipoDeProduto": "copo",
+    "preco": 30.00,
+    "frase": "Refresque seu dia com notas cítricas e muita leveza."
+  },
+  {
+    "id": 5,
+    "nome": "Copo Cacau",
+    "descricao": "Café orgânico, sabor intenso e aroma marcante.",
+    "foto": "/copoCacau.png",
+    "tipoDeProduto": "copo",
+    "preco": 30.00,
+    "frase": "A intensidade do cacau em cada gole, para momentos únicos."
+  },
+
+  {
+    "id": 6,
+    "nome": "Café Frutas Cítricas",
+    "descricao": "Café de alta qualidade, com notas de frutas cítricas.",
+    "foto": "/cafeFC.png",
+    "preco": 30.00,
+    "tipoDeProduto": "cafe",
+    "frase": "A energia das frutas cítricas para inspirar seu dia."
+  },
+  {
+    "id": 7,
+    "nome": "Café Cacau",
+    "descricao": "Café especial com sabor rico e notas de cacau.",
+    "foto": "/cafeCacau.png",
+    "tipoDeProduto": "cafe",
+    "preco": 30.00,
+    "frase": "Notas de cacau para um café especial e marcante."
+  },
+
+    {
+        "id": 8,
+        "nome": "Filtro de alumínio",
+        "descricao": "Filtro de café de alumínio reutilizável e sustentável.",
+        "foto": "/filtro2.png",
+        "tipoDeProduto": "filtro",
+    "preco": 47.00,
+    "frase": "Filtro reutilizável: café gostoso e planeta agradece."
+  }
+]

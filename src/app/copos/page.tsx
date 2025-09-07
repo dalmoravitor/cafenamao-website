@@ -1,6 +1,9 @@
 import { Header } from "@/components/Header";
 import './index.css'
 
+import Link from "next/link";
+
+
 export default function CoposPage() {
     return (
         <div>
@@ -18,18 +21,21 @@ export default function CoposPage() {
             <section className="productSection">
 
                 <img src="/coffeeDecoration.png" style={{ margin: '20px', width: '110px', position: 'absolute', top: "190%", left: '0%' }} />
-                <img className="productSectionImg" src="/copoCacau.png" alt="" />
-                    <div className="productSectionTextBox">
-                        <h2 className="productSectionTitle">Copo Cacau <span className="productTitleVolume">180ml</span></h2>
-                        <p className="productSectionDescription">representa a união perfeita entre praticidade, qualidade e sabor. Desenvolvido para atender às necessidades do consumidor moderno, este copo inovador traz em seu interior um filtro integrado com café especialmente selecionado, enriquecido com notas marcantes de cacau.</p>
-                        <button className="productSectionButton">Ver produto</button>
-                    </div>
+
+        <img className="productSectionImg" src="/copoCacau.png" alt="" />
+        <div className="productSectionTextBox">
+          <h2 className="productSectionTitle">Copo Cacau <span className="productTitleVolume">180ml</span></h2>
+          <p className="productSectionDescription">representa a união perfeita entre praticidade, qualidade e sabor. Desenvolvido para atender às necessidades do consumidor moderno, este copo inovador traz em seu interior um filtro integrado com café especialmente selecionado, enriquecido com notas marcantes de cacau.</p>
+          <Link style={{ width: '100%' }} href="/produto/5">
+            <button className="productSectionButton">Ver produto</button>
+          </Link>
+        </div>
 
 
                     
             </section>
 
-             <section className="productSection">
+             <section className="productSection inverted">
 
                     <img src="/coffeeDecoration.png" style={{margin: '20px', width: '120px', position: 'absolute', top: "100%", right: '0%' }} />
                                         <img src="/coffeeDecoration.png" style={{margin: '20px', width: '120px', position: 'absolute', top: "300%", right: '0%' }} />
@@ -38,7 +44,9 @@ export default function CoposPage() {
                     <div className="productSectionTextBox">
                         <h2 className="productSectionTitle">Copo Frutas Cítricas <span className="productTitleVolume">180ml</span></h2>
                         <p className="productSectionDescription">A harmonização do café com notas de frutas cítricas resulta em uma bebida leve, vibrante e revigorante, ideal para quem deseja um sabor diferenciado sem abrir mão da qualidade.</p>
-                        <button className="productSectionButton">Ver produto</button>
+                        <Link style={{ width: '100%' }} href={`/produto/4`}>
+                          <button className="productSectionButton">Ver produto</button>
+                        </Link>
                     </div>
 
                     <img className="productSectionImg" src="/copoFC.png" alt="" />
@@ -48,15 +56,22 @@ export default function CoposPage() {
 
             <section style={{marginBottom: '140px'}} className="productSection">
 
-                <img style={{ width: '400px', rotate: '10deg', height: 'auto' }} className="productSectionImg" src="/expresso.png" alt="" />
-                    <div  className="productSectionTextBox">
-                        <h2 className="productSectionTitle">Copo Expresso <span className="productTitleVolume">180ml</span></h2>
-                        <p className="productSectionDescription">Prático e sofisticado, basta adicionar água quente para desfrutar de toda a tradição do verdadeiro expresso, agora ao alcance das suas mãos.</p>
-                        <button className="productSectionButton">Ver produto</button>
-                    </div>
+
+        <img style={{ width: '400px', rotate: '10deg', height: 'auto' }} className="productSectionImg" src="/expresso.png" alt="" />
+        <div  className="productSectionTextBox">
+          <h2 className="productSectionTitle">Copo Expresso <span className="productTitleVolume">180ml</span></h2>
+          <p className="productSectionDescription">Prático e sofisticado, basta adicionar água quente para desfrutar de toda a tradição do verdadeiro expresso, agora ao alcance das suas mãos.</p>
+          <Link style={{ width: '100%' }} href="/produto/2">
+            <button className="productSectionButton">Ver produto</button>
+          </Link>
+        </div>
                     
             </section>
 
+            <div style={{display: 'flex', justifyContent: 'center', gap: 16, margin: '32px 0'}}>
+              <Link href="/cart" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Ver carrinho</button></Link>
+              <Link href="/checkout" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Finalizar compra</button></Link>
+            </div>
             <footer className="bg-1b1a1a text-white py-4 border-t border-white">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8">
         {/* Logo */}

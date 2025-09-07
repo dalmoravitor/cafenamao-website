@@ -16,7 +16,11 @@ export default function Conta() {
       <Header />
 
       <div className="card-pontos">
-        <h3>Seus pontos: 1100</h3>
+        <div>
+          <h3>Você possui <span className="texto-destaque-card-pontos">1100 copinhos!</span></h3>
+          <p>Faltam <span className="texto-destaque-card-pontos">900</span> copinhos para ganhar um kit com <span className="texto-destaque-card-pontos">6 cafés grátis!</span></p>
+        </div>
+        <button className="botaoPontos">Ver recompensas</button>
       </div>
 
       <div className="container-conteudo">

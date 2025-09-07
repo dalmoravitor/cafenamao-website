@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import './index.css'
+import Link from "next/dist/client/link";
 
 export default function CoposPage() {
     return (
@@ -21,14 +22,16 @@ export default function CoposPage() {
                     <div className="productSectionTextBox">
                         <h2 className="productSectionTitle">Suporte filtro de papel  <span className="productTitleVolume">102</span></h2>
                         <p className="productSectionDescription">Feito com borra de café reutilizada, este suporte sustentável foi desenvolvido especialmente para filtros de papel tamanho 102. Ele não acompanha o filtro, sendo apenas o suporte, ideal para preparar um café fresco de forma prática, consciente e com estilo.</p>
-                        <button className="productSectionButton">Ver produto</button>
+                        <Link style={{ width: '100%' }} href="/produto/3">
+                          <button className="productSectionButton">Ver produto</button>
+                        </Link>
                     </div>
 
 
                     
             </section>
 
-             <section className="productSection">
+             <section className="productSection inverted">
 
                     <img src="/coffeeDecoration.png" style={{margin: '20px', width: '120px', position: 'absolute', top: "70%", right: '0%' }} />
                                         <img src="/coffeeDecoration.png" style={{margin: '20px', width: '120px', position: 'absolute', top: "190%", right: '0%' }} />
@@ -37,7 +40,9 @@ export default function CoposPage() {
                     <div className="productSectionTextBox">
                         <h2 className="productSectionTitle">Filtro de café feito de alumínio </h2>
                         <p className="productSectionDescription">Durável, fácil de lavar e sem necessidade de filtros de papel. Preserva o sabor encorpado do café e ajuda a reduzir o lixo, tornando sua rotina mais prática e sustentável.</p>
-                        <button className="productSectionButton">Ver produto</button>
+                        <Link style={{ width: '100%' }} href="/produto/8">
+                          <button className="productSectionButton">Ver produto</button>
+                        </Link>
                     </div>
 
                     <img className="productSectionImg" src="/filtro2.png" alt="" />
@@ -46,6 +51,10 @@ export default function CoposPage() {
             </section>
 
 
+            <div style={{display: 'flex', justifyContent: 'center', gap: 16, margin: '32px 0'}}>
+              <Link href="/cart" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Ver carrinho</button></Link>
+              <Link href="/checkout" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Finalizar compra</button></Link>
+            </div>
             <footer className="bg-1b1a1a text-white py-4 border-t border-white">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8">
         {/* Logo */}
