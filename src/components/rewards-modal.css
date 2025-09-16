@@ -1,0 +1,186 @@
+/* Mini tutorial de copinhos */
+.rewards-tutorial {
+  width: 100%;
+  margin-top: 32px;
+  background: #191919;
+  border-radius: 10px;
+  padding: 18px 18px 12px 18px;
+  color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+}
+.rewards-tutorial h3 {
+  color: #FFD600;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.rewards-tutorial ul {
+  padding-left: 18px;
+  margin: 0;
+  font-size: 0.98rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.rewards-tutorial li {
+  margin-bottom: 0;
+  color: #fff;
+  list-style: none;
+}
+/* Modal de recompensas - estilos básicos */
+.rewards-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rewards-modal-content {
+  background: #232323;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
+  padding: 2.5% 3% 2.5% 3%;
+  width: 54%;
+  min-width: 320px;
+  max-width: 820px;
+  min-height: 44vh;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+.rewards-modal-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.rewards-modal-header h2 {
+  color: #FFD600;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.rewards-modal-header .rewards-count {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.rewards-modal-header .rewards-persuade {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.rewards-modal-products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.rewards-product {
+  background: #191919;
+  border-radius: 12px;
+  padding: 16px 12px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+  width: 46%;
+  min-width: 180px;
+  max-width: 220px;
+}
+.rewards-product-img {
+  width: 100px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  display: block;
+}
+.rewards-product-title {
+  color: #FFD600;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rewards-progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.rewards-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #FFD600 60%, #FFD600 30%  100%);
+  border-radius: 6px;
+}
+.rewards-product-btn {
+  background: #FFD600;
+  color: #191919;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.rewards-product-btn:disabled {
+  background: #bdbdbd;
+  color: #888;
+  cursor: not-allowed;
+}
+.rewards-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #FFD600;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  transition: color 0.2s;
+}
+.rewards-modal-close:hover {
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .rewards-modal-content {
+    width: 80%;
+    max-width: 96vw;
+    min-width: 0;
+    padding: 4% 6% 4% 6%;
+  }
+  .rewards-product {
+    width: 98%;
+    max-width: 340px;
+  }
+}
+@media (max-width: 600px) {
+  .rewards-modal-content {
+    width: 92%;
+    max-width: 98vw;
+    min-width: 0;
+    padding: 6vw 3vw 6vw 3vw;
+    min-height: 0;
+  }
+}

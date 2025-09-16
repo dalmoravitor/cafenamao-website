@@ -1,0 +1,209 @@
+/* Signup page styles for Café Na Mão */
+
+.main {
+  min-height: 100vh;
+  background: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginbox {
+  background: rgba(25, 25, 25, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
+  padding: 48px 40px 32px 40px;
+  max-width: 420px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginBoxTextos h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.loginBoxTextos p {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.destaque {
+  color: #FFD600;
+  font-weight: 500;
+}
+
+.loginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputTitle {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.inputField {
+  background: #232323;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.inputField:focus {
+  border: 1.5px solid #FFD600;
+}
+
+.esqueciSenha {
+  background: none;
+  border: none;
+  color: #FFD600;
+  font-size: 0.95rem;
+  align-self: flex-end;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: text-decoration 0.2s;
+}
+.esqueciSenha:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  background: none;
+  border: 1.5px solid #FFD600;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.loginButton:hover {
+  background: #FFD600;
+  color: #191919;
+}
+
+.signupText {
+  color: #fff;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.98rem;
+}
+.signupLink {
+  color: #FFD600;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.signupLink:hover {
+  text-decoration: underline;
+}
+
+/* Decorative images */
+/* Imagens decorativas maiores e absolutas */
+.signup-decoration {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.signup-copo-citrico {
+  top: 40px;
+  left: 130px;
+  width: 350px;
+  max-width: 38vw;
+  transform: rotate(-18deg);
+}
+.signup-copo-expresso {
+  top: -32px;
+  right: 90px;
+  width: 320px;
+  max-width: 38vw;
+  transform: rotate(18deg);
+}
+.signup-copo-v60 {
+  left: 50px;
+  bottom: 30px;
+  width: 240px;
+  max-width: 32vw;
+  transform: rotate(-10deg);
+}
+.signup-cacau-box {
+  right: 150px;
+  bottom: 24px;
+  width: 270px;
+  max-width: 28vw;
+  transform: rotate(12deg);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .signup-copo-citrico, .signup-copo-expresso, .signup-copo-v60, .signup-cacau-box {
+    width: 180px;
+    max-width: 32vw;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+  }
+  .signup-copo-citrico {
+    top: -20px;
+    left: -30px;
+  }
+  .signup-copo-expresso {
+    top: -18px;
+    right: -36px;
+  }
+  .signup-copo-v60 {
+    left: -24px;
+    bottom: -16px;
+  }
+  .signup-cacau-box {
+    right: -18px;
+    bottom: -12px;
+  }
+  .loginbox {
+    padding: 32px 12px 24px 12px;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .main {
+    padding: 16px 0;
+  }
+  .signup-copo-citrico, .signup-copo-expresso, .signup-copo-v60, .signup-cacau-box {
+    display: none !important;
+  }
+  .loginbox {
+    padding: 18px 2vw 12px 2vw;
+    border-radius: 12px;
+  }
+  .loginBoxTextos h1 {
+    font-size: 1.2rem;
+  }
+}

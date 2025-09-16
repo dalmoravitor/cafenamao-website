@@ -1,10 +1,14 @@
 "use client";
 
 import Link from 'next/link';
-import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
+import { FiSearch, FiShoppingCart, FiMenu, FiX , FiCoffee} from 'react-icons/fi';
+import { FaMugHot, FaCoffee } from 'react-icons/fa';
+import produtosData from '../data/produtos.json';
+import '../components/rewards-modal.css';
 import React, { useState, useEffect } from "react";
 import './header.css';
 import {CardProduto} from "../components/CardProduto"; // ajuste o caminho se necessário
+import { BiCoffeeTogo } from 'react-icons/bi';
 
 const produtosMock = [
   { id: 1, nome: "Café Caramelo" },
@@ -21,6 +25,7 @@ const produtosMock = [
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [rewardsOpen, setRewardsOpen] = useState(false);
   const [busca, setBusca] = useState("");
 
   const produtosFiltrados = produtosMock.filter(produto =>
@@ -28,16 +33,25 @@ export function Header() {
   );
 
   useEffect(() => {
-    if (modalOpen) {
+    if (modalOpen || rewardsOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-    // Limpa ao desmontar
     return () => {
       document.body.style.overflow = "";
     };
-  }, [modalOpen]);
+  }, [modalOpen, rewardsOpen]);
+
+  // Dados de recompensas
+  const copinhos = 1100;
+  // Produtos e metas de troca (exemplo)
+  const produtosRecompensa = [
+    { ...produtosData[0], meta: 800 },
+    { ...produtosData[1], meta: 1200 },
+    { ...produtosData[2], meta: 600 },
+    { ...produtosData[3], meta: 2000 },
+  ];
 
   return (
     <>
@@ -57,6 +71,10 @@ export function Header() {
 
         {/* Ícones à direita */}
         <div className="header-icons">
+          {/* Ícone de recompensas */}
+          <button className="icon-link" style={{background: 'none', border: 'none', marginRight: 6, cursor: 'pointer'}} onClick={() => setRewardsOpen(true)} title="Recompensas">
+            <BiCoffeeTogo color="#FFD600" size={22} />
+          </button>
           <Link className="icon-link" href="/sustentabilidade">
             <img style={{width: 20}} src="/sustentabilidade.png" alt="" />
           </Link>
@@ -98,6 +116,57 @@ export function Header() {
               {produtosFiltrados.map(produto => (
                 <CardProduto key={produto.id} id={produto.id} />
               ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal de recompensas */}
+      {rewardsOpen && (
+        <div className="rewards-modal-overlay" onClick={() => setRewardsOpen(false)}>
+          <div className="rewards-modal-content" onClick={e => e.stopPropagation()}>
+            <button className="rewards-modal-close" onClick={() => setRewardsOpen(false)} title="Fechar" aria-label="Fechar">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="5" y1="5" x2="15" y2="15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="15" y1="5" x2="5" y2="15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </button>
+            <div className="rewards-modal-header">
+              <h2 style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, flexWrap: 'nowrap'}}>
+                Troque seus <span style={{display: 'inline-flex', alignItems: 'center'}}><BiCoffeeTogo /></span> por cafés de verdade!
+              </h2>
+              <div className="rewards-count">Você possui <b>{copinhos}</b> copinhos</div>
+              <div className="rewards-persuade">Troque seus copinhos por produtos exclusivos! Quanto mais você compra, mais copinhos acumula.</div>
+            </div>
+            <div className="rewards-modal-products">
+              {produtosRecompensa.map(produto => {
+                const progresso = Math.min(100, Math.round((copinhos / produto.meta) * 100));
+                return (
+                  <div className="rewards-product" key={produto.id}>
+                    <img className="rewards-product-img" src={produto.foto} alt={produto.nome} />
+                    <div className="rewards-product-title">{produto.nome}</div>
+                    <div className="rewards-progress-bar">
+                      <div className="rewards-progress" style={{width: progresso + '%'}}></div>
+                    </div>
+                    <div style={{fontSize: '0.95rem', color: '#fff', marginBottom: 6}}>
+                      Meta: {produto.meta} copinhos
+                    </div>
+                    <button className="rewards-product-btn" disabled={copinhos < produto.meta}>
+                      Trocar por {produto.meta} copinhos
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Mini tutorial */}
+            <div className="rewards-tutorial">
+              <h3>Como acumular copinhos?</h3>
+              <ul>
+                <li>• Faça compras de qualquer produto no site e ganhe copinhos proporcional ao valor.</li>
+                <li>• Participe de promoções e eventos especiais para ganhar copinhos extras.</li>
+                <li>• Indique amigos: cada amigo que comprar usando seu link gera copinhos para você.</li>
+                <li>• Avalie produtos adquiridos e ganhe copinhos bônus.</li>
+              </ul>
             </div>
           </div>
         </div>
