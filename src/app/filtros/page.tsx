@@ -86,11 +86,10 @@ export default function CoposPage() {
 
         {/* Informações */}
         <div>
-          <h3 className="text-sm font-serif font-semibold mb-4">INFORMAÇÕES</h3>
+          <h3 className="text-sm font-serif font-semibold mb-4">Informações</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="#">Plans & pricing</a></li>
-            <li><a href="#">Sell your products</a></li>
-            <li><a href="#">Jobs</a></li>
+            <li>Planos e preços</li>
+            <li>Trabalhe conosco</li>
           </ul>
         </div>
 

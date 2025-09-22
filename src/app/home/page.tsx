@@ -122,32 +122,30 @@ export default function Home() {
     <div className="footer-section">
       <h3>Serviços</h3>
       <ul>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Order ahead</a></li>
-        <li><a href="#">Menu</a></li>
+        <li>Loja</li>
+        <li>Peça antecipado</li>
+        <li>Cardápio</li>
       </ul>
     </div>
     <div className="footer-section">
       <h3>Sobre nós</h3>
       <ul>
-        <li><a href="#">Find a location</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Our story</a></li>
+        <li>Encontre uma loja</li>
+        <li>Sobre nós</li>
+        <li>Nossa história</li>
       </ul>
     </div>
     <div className="footer-section">
       <h3>Informações</h3>
       <ul>
-        <li><a href="#">Plans & pricing</a></li>
-        <li><a href="#">Sell your products</a></li>
-        <li><a href="#">Jobs</a></li>
+        <li>Planos e preços</li>
+        <li>Trabalhe conosco</li>
       </ul>
     </div>
     <div className="footer-section">
       <h3>Redes Sociais</h3>
       <ul>
-        <li><a href="#">Instagram</a></li>
-        {/* Adicione outros links de redes sociais aqui */}
+        <li>Instagram</li>
       </ul>
     </div>
   </div>

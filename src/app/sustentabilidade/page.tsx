@@ -49,40 +49,33 @@ export default function Sustentabilidade() {
             <h2>CAFÉ NA MÃO</h2>
           </div>
           <div>
-            <h3>PRIVACY</h3>
+            <h3>Serviços</h3>
             <ul>
-              <li>Termos de uso</li>
-              <li>Política de privacidade</li>
-              <li>Cookies</li>
+              <li>Loja</li>
+              <li>Peça antecipado</li>
+              <li>Cardápio</li>
             </ul>
           </div>
           <div>
-            <h3>SERVIÇOS</h3>
+            <h3>Sobre nós</h3>
             <ul>
-              <li>Shop</li>
-              <li>Order ahead</li>
-              <li>Menu</li>
+              <li>Encontre uma loja</li>
+              <li>Sobre nós</li>
+              <li>Nossa história</li>
             </ul>
           </div>
           <div>
-            <h3>SOBRE NÓS</h3>
+            <h3>Informações</h3>
             <ul>
-              <li>Find a location</li>
-              <li>About us</li>
-              <li>Our story</li>
+              <li>Planos e preços</li>
+              <li>Trabalhe conosco</li>
             </ul>
           </div>
           <div>
-            <h3>INFORMAÇÕES</h3>
+            <h3>Redes Sociais</h3>
             <ul>
-              <li>Plans & pricing</li>
-              <li>Sell your products</li>
-              <li>Jobs</li>
+              <li>Instagram</li>
             </ul>
-          </div>
-          <div>
-            <h3>REDES SOCIAIS</h3>
-            <span className="footer-social-icon">&#x1F4F7;</span>
           </div>
         </div>
       </footer>
