@@ -64,10 +64,7 @@ export default function CoposPage() {
                     
             </section>
 
-            <div style={{display: 'flex', justifyContent: 'center', gap: 16, margin: '32px 0'}}>
-              <Link href="/cart" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Ver carrinho</button></Link>
-              <Link href="/checkout" style={{width: '40%'}}><button className="productSectionButton" style={{width: '100%'}}>Finalizar compra</button></Link>
-            </div>
+            {/* Botões removidos conforme solicitado */}
             <footer className="bg-1b1a1a text-white py-4 border-t border-white">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8">
         {/* Logo */}

@@ -1,14 +1,8 @@
 
-import "./page.css";
 
 export default function Signup() {
     return (
         <div className="main">
-            {/* Imagens decorativas */}
-            <img src="/copoCacau.png" alt="Copo Frutas Cítricas" className="signup-decoration signup-copo-citrico" />
-            <img src="/copoFC.png" alt="Copo Expresso" className="signup-decoration signup-copo-expresso" />
-            <img src="/filtro1.png" alt="Copo V60" className="signup-decoration signup-copo-v60" />
-            <img src="/cafeCacau.png" alt="Café Cacau Box" className="signup-decoration signup-cacau-box" />
 
             <div className="loginbox">
                 <div className="loginBoxTextos">
@@ -19,30 +13,36 @@ export default function Signup() {
                 <form className="loginForm">
                     <div className="input">
                         <p className="inputTitle" >Seu nome</p>
-                        <input type="text" className="inputField" required />
+                        <input type="text" className="inputField" required/>
                     </div>
 
                     <div className="input">
                         <p className="inputTitle" >Email</p>
-                        <input type="email" className="inputField" required />
+                        <input type="email" className="inputField" required/>
+
                     </div>
 
                     <div className="input">
                         <p className="inputTitle" >Senha</p>
-                        <input type="password" className="inputField" required />
+                        <input type="password" className="inputField" required/>
                     </div>
 
                     <div className="input">
                         <p className="inputTitle" >Confirmar senha</p>
-                        <input type="password" className="inputField" required />
+                        <input type="password" className="inputField" required/>
                     </div>
 
+                    <button type="button" className="esqueciSenha">Esqueceu a senha?</button>
 
-                    <button type="submit" className="loginButton">Criar e entrar</button>
+                    <button type="submit" className="loginButton">Criar minha conta</button>
 
-                    <p className="signupText">Já tem uma conta? <a href="/entrar" className="signupLink">Fazer login</a></p>
+
+                    <p className="signupText">Já tem uma conta? <a href="/login" className="signupLink">Entrar</a></p>
+
+
                 </form>
+
             </div>
         </div>
-    );
+    )
 }
