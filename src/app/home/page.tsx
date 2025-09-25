@@ -12,7 +12,6 @@ export default function Home() {
       {/* Decorações */}
       <img className="home-decoration left" src="/coffeeDecoration.png" alt="" />
       <img className="home-decoration right" src="/coffeeDecoration.png" alt="" />
-      <img className="home-decoration center" src="/coffeeDecoration.png" alt="" />
 
       <Header />
 

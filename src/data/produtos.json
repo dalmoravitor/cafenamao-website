@@ -1,20 +1,20 @@
 [
   {
     "id": 1,
-    "nome": "Café Caramelo",
-    "descricao": "Café em grãos 100% arábica com notas de caramelo.",
+    "nome": "Kit Caramelo (6 cafés)",
+    "descricao": "Kit com 6 copos de café Caramelo. Café em grãos 100% arábica com notas de caramelo.",
     "foto": "/cafeCaramelo.png",
-    "preco": 30.00,
-    "tipoDeProduto": "cafe",
+    "preco": 90.00,
+    "tipoDeProduto": "kit",
     "frase": "O sabor doce do caramelo para adoçar sua rotina."
   },
   {
     "id": 2,
-    "nome": "Copo Expresso",
-    "descricao": "Copo de café sabor expresso sustentável e prático.",
+    "nome": "Kit Expresso (6 cafés)",
+    "descricao": "Kit com 6 copos de café Expresso sustentável e prático.",
     "foto": "/expresso.png",
-    "tipoDeProduto": "copo",
-    "preco": 30.00,
+    "tipoDeProduto": "kit",
+    "preco": 90.00,
     "frase": "Praticidade e energia em um só gole, onde você estiver."
   },
   {
@@ -28,23 +28,22 @@
   },
   {
     "id": 4,
-    "nome": "Copo Frutas Cítricas",
-    "descricao": "Copo térmico reutilizável, mantém sua bebida quente por horas.",
+    "nome": "Kit Frutas Cítricas (6 cafés)",
+    "descricao": "Kit com 6 copos de café Frutas Cítricas. Café leve, vibrante e revigorante.",
     "foto": "/copoFC.png",
-    "tipoDeProduto": "copo",
-    "preco": 30.00,
+    "tipoDeProduto": "kit",
+    "preco": 90.00,
     "frase": "Refresque seu dia com notas cítricas e muita leveza."
   },
   {
     "id": 5,
-    "nome": "Copo Cacau",
-    "descricao": "Café orgânico, sabor intenso e aroma marcante.",
+    "nome": "Kit Cacau (6 cafés)",
+    "descricao": "Kit com 6 copos de café Cacau. Café orgânico, sabor intenso e aroma marcante.",
     "foto": "/copoCacau.png",
-    "tipoDeProduto": "copo",
-    "preco": 30.00,
+    "tipoDeProduto": "kit",
+    "preco": 90.00,
     "frase": "A intensidade do cacau em cada gole, para momentos únicos."
   },
-
   {
     "id": 6,
     "nome": "Café Frutas Cítricas",
@@ -63,14 +62,22 @@
     "preco": 30.00,
     "frase": "Notas de cacau para um café especial e marcante."
   },
-
-    {
-        "id": 8,
-        "nome": "Filtro de alumínio",
-        "descricao": "Filtro de café de alumínio reutilizável e sustentável.",
-        "foto": "/filtro2.png",
-        "tipoDeProduto": "filtro",
+  {
+    "id": 8,
+    "nome": "Filtro de alumínio",
+    "descricao": "Filtro de café de alumínio reutilizável e sustentável.",
+    "foto": "/filtro2.png",
+    "tipoDeProduto": "filtro",
     "preco": 47.00,
     "frase": "Filtro reutilizável: café gostoso e planeta agradece."
+  },
+  {
+    "id": 9,
+    "nome": "Kit Misto (6 cafés)",
+    "descricao": "Kit com 2 copos Caramelo, 2 Frutas Cítricas e 2 Cacau. Experimente todos os sabores!",
+    "foto": "/kitMisto.png",
+    "tipoDeProduto": "kit",
+    "preco": 90.00,
+    "frase": "O melhor de cada sabor em um só kit."
   }
 ]

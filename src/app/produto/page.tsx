@@ -10,6 +10,11 @@ export default function ProdutoPage() {
 		<div className="produto-container">
 			<Header />
 			
+			<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'center' }}>
+				{produtos.map((produto) => (
+					<CardProduto key={produto.id} id={produto.id} />
+				))}
+			</div>
 		</div>
 	);
 }

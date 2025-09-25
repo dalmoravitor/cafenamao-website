@@ -1,3 +1,32 @@
+/* Modal de Recompensas */
+.rewards-modal {
+  width: 70vw !important;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #0002;
+  padding: 32px 24px 24px 24px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+@media (min-width: 900px) {
+  .rewards-modal {
+    width: 70vw;
+    padding: 40px 64px 32px 64px;
+  }
+}
+.modal-overlay {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 1000;
+}
+.rewards-modal::-webkit-scrollbar {
+  width: 8px;
+  background: #eee;
+}
+.rewards-modal::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 8px;
+}
 .link-hover:hover {
     font-size: 22px;
   color: #FFB921; /* exemplo de cor para hover */
