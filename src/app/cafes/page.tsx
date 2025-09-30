@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import './index.css'
 import Link from "next/link";
 
-export default function CoposPage() {
+export default function CafesPage() {
     return (
         <div>
             <Header />

@@ -1,7 +1,6 @@
 "use client";
 import { Header } from "@/components/Header";
 import './coffee-plus.css';
-import Link from "next/link";
 
 export default function CoffeePlusPage() {
   return (
@@ -171,7 +170,7 @@ export default function CoffeePlusPage() {
             <div className="testimonial-card">
               <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
               <p className="testimonial-text">
-                "O Coffee+ mudou minha rotina completamente! Não preciso mais me preocupar em comprar café, e a qualidade é excepcional. O sabor Cacau é viciante!"
+                &quot;O Coffee+ mudou minha rotina completamente! Não preciso mais me preocupar em comprar café, e a qualidade é excepcional. O sabor Cacau é viciante!&quot;
               </p>
               <div className="testimonial-author">
                 <img src="/fabiana.png" alt="Fabiana" className="author-photo" />
@@ -185,7 +184,7 @@ export default function CoffeePlusPage() {
             <div className="testimonial-card">
               <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
               <p className="testimonial-text">
-                "Economia real! Calculei e estou gastando 30% menos com café desde que assinei. Além disso, a variedade me fez descobrir sabores que nem sabia que existiam."
+                &quot;Economia real! Calculei e estou gastando 30% menos com café desde que assinei. Além disso, a variedade me fez descobrir sabores que nem sabia que existiam.&quot;
               </p>
               <div className="testimonial-author">
                 <img src="/vito.png" alt="Vitor" className="author-photo" />
@@ -199,7 +198,7 @@ export default function CoffeePlusPage() {
             <div className="testimonial-card">
               <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
               <p className="testimonial-text">
-                "Perfeito para quem tem uma rotina corrida como eu. O café sempre chega no dia certo, com embalagem impecável. Recomendo para todos os coffee lovers!"
+                &quot;Perfeito para quem tem uma rotina corrida como eu. O café sempre chega no dia certo, com embalagem impecável. Recomendo para todos os coffee lovers!&quot;
               </p>
               <div className="testimonial-author">
                 <img src="/samile.png" alt="Samile" className="author-photo" />

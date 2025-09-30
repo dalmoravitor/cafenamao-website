@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
-import { FaCoffee } from 'react-icons/fa';
 import produtosData from '../data/produtos.json';
 import React, { useState, useEffect } from "react";
 import './header.css';

@@ -7,7 +7,7 @@ import './conta.css'
 
 export default function Conta() {
   const [nome, setNome] = useState('Vitor');
-  const [email, setEmail] = useState('vitor@example.com');
+  const [email] = useState('vitor@example.com');
   const [novaSenha, setNovaSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
 
