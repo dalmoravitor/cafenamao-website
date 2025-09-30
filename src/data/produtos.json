@@ -4,7 +4,7 @@
     "nome": "Kit Caramelo (6 cafés)",
     "descricao": "Kit com 6 copos de café Caramelo. Café em grãos 100% arábica com notas de caramelo.",
     "foto": "/cafeCaramelo.png",
-    "preco": 90.00,
+    "preco": 30.00,
     "tipoDeProduto": "kit",
     "frase": "O sabor doce do caramelo para adoçar sua rotina."
   },
@@ -14,7 +14,7 @@
     "descricao": "Kit com 6 copos de café Expresso sustentável e prático.",
     "foto": "/expresso.png",
     "tipoDeProduto": "kit",
-    "preco": 90.00,
+    "preco": 30.00,
     "frase": "Praticidade e energia em um só gole, onde você estiver."
   },
   {
@@ -32,7 +32,7 @@
     "descricao": "Kit com 6 copos de café Frutas Cítricas. Café leve, vibrante e revigorante.",
     "foto": "/copoFC.png",
     "tipoDeProduto": "kit",
-    "preco": 90.00,
+    "preco": 30.00,
     "frase": "Refresque seu dia com notas cítricas e muita leveza."
   },
   {
@@ -41,7 +41,7 @@
     "descricao": "Kit com 6 copos de café Cacau. Café orgânico, sabor intenso e aroma marcante.",
     "foto": "/copoCacau.png",
     "tipoDeProduto": "kit",
-    "preco": 90.00,
+    "preco": 30.00,
     "frase": "A intensidade do cacau em cada gole, para momentos únicos."
   },
   {
@@ -77,7 +77,7 @@
     "descricao": "Kit com 2 copos Caramelo, 2 Frutas Cítricas e 2 Cacau. Experimente todos os sabores!",
     "foto": "/kitMisto.png",
     "tipoDeProduto": "kit",
-    "preco": 90.00,
+    "preco": 30.00,
     "frase": "O melhor de cada sabor em um só kit."
   }
 ]

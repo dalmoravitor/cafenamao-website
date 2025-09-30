@@ -48,7 +48,7 @@ export function Header() {
       <header className="header-container">
         <Link className="logo-link" href="/home">
           <img className="logo-img" src="/logo.png" alt="Logo" />
-          <span className="logo-text">café na mão</span>
+          <span className="logo-text">Café Na Mão</span>
         </Link>
 
         {/* Links do meio - desktop */}
@@ -57,12 +57,13 @@ export function Header() {
           <Link className="link-hover" href="/copos">Copos</Link>
           <Link className="link-hover" href="/filtros">Filtros</Link>
           <Link className="link-hover" href="/conta">Conta</Link>
+          <Link className="link-hover coffee-plus-link" href="/coffee-plus">Coffee+</Link>
         </nav>
 
         {/* Ícones à direita */}
         <div className="header-icons">
           <Link className="icon-link" href="/sustentabilidade">
-            <img style={{width: 20}} src="/sustentabilidade.png" alt="" />
+            <img style={{width: 20, height: 20}} src="/sustentabilidade.png" alt="Sustentabilidade" />
           </Link>
           <button className="icon-link" onClick={() => setRewardsOpen(true)} title="Recompensas">
             <BiCoffeeTogo color="#a86b2d" size={22} />
@@ -81,30 +82,30 @@ export function Header() {
       {/* Modal de Recompensas */}
       {rewardsOpen && (
         <div className="modal-overlay" style={{zIndex: 1000}} onClick={() => setRewardsOpen(false)}>
-          <div className="modal-content rewards-modal" style={{ width: '90vw', overflowY: 'auto', maxHeight: '90vh'}} onClick={e => e.stopPropagation()}>
+          <div className="modal-content rewards-modal" style={{ width: '90vh', overflowY: 'auto', maxHeight: '90vh', padding: '24px', margin: '0 30px'}} onClick={e => e.stopPropagation()}>
             <div style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8}}>
               <div style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center'}}>
-                <BiCoffeeTogo style={{marginLeft: '48%'}} color="#a86b2d" size={32} />
+                <BiCoffeeTogo style={{marginLeft: '48%'}} color="#FFB921" size={32} />
 
-                <div style={{fontWeight: 700, fontSize: 30}}>Você tem <span style={{color:'#a86b2d'}}>{userCopinhos} copinhos</span></div>
-                <div style={{fontSize: 20, color: '#e3e1e1ff'}}>Acumule copinhos comprando produtos e troque por recompensas exclusivas!</div>
+                <div style={{fontWeight: 700, fontSize: 30, fontFamily: 'serif', color: '#fff'}}>Você tem <span style={{color:'#FFB921'}}>{userCopinhos} copinhos!</span></div>
+                <div style={{fontSize: 20, color: '#ccc'}}>Acumule copinhos comprando produtos e troque por recompensas exclusivas!</div>
               </div>
             </div>
-            <hr style={{margin: '12px 0'}} />
+            <hr style={{margin: '12px 0', borderColor: '#333'}} />
 
-                <div className="minitutorial" style={{ maxWidth: 500, margin: '32px auto 24px', background: '#fffbe7', borderRadius: 12, padding: 24, boxShadow: '0 2px 8px #0001' }}>
-            <h2 style={{ fontSize: 20, marginBottom: 12, color: '#b8860b', fontWeight: 700 }}>Como ganhar um produto grátis?</h2>
-            <ol style={{ paddingLeft: 20, color: '#333', fontSize: 16, lineHeight: 1.7, listStyleType: 'number' }}>
+                <div className="minitutorial" style={{ maxWidth: 500, margin: '32px auto 24px', background: '#2a2a2a', borderRadius: 12, padding: 24, boxShadow: '0 2px 8px rgba(0,0,0,0.3)', border: '1px solid #444' }}>
+            <h2 style={{ fontSize: 20, marginBottom: 12, color: '#FFB921', fontWeight: 700 }}>Como ganhar um produto grátis?</h2>
+            <ol style={{ paddingLeft: 20, color: '#ccc', fontSize: 16, lineHeight: 1.7, listStyleType: 'number' }}>
               <li>Atinja a meta de copinhos comprando nossos cafés.</li>
               <li>Troque seus copinhos por qualquer produto disponível nesta página.</li>
               <li>Finalize a troca e aproveite seu produto grátis!</li>
             </ol>
           </div>
-            <div style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 24}}>
+            <div className="rewards-cards-container" style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 24}}>
               {[
-                {id: 2, meta: 900},
-                {id: 4, meta: 1200},
-                {id: 5, meta: 1500},
+                {id: 2, meta: 2000},
+                {id: 4, meta: 2000},
+                {id: 5, meta: 2000},
                 {id: 9, meta: 2000},
               ].map(({id, meta}) => {
                 const prod = produtosData.find(p => p.id === id);
@@ -112,18 +113,18 @@ export function Header() {
                 return prod ? (
 
                   
-                  <div key={id} style={{ height: '170px', width: '30%', color: '#a86b2d', background: '#f7f5f2', borderRadius: 16, padding: 18, boxShadow: '0 2px 8px #0001'}}>
-                    <div style={{fontWeight: 600, fontSize: 17, marginBottom: 4}}>{prod.nome}</div>
+                  <div key={id} style={{ height: '170px', width: '30%', color: '#fff', background: '#2a2a2a', borderRadius: 16, padding: 18, boxShadow: '0 4px 16px rgba(0,0,0,0.3)', border: '1px solid #444'}}>
+                    <div style={{fontWeight: 600, fontSize: 17, marginBottom: 4, color: '#FFB921'}}>{prod.nome}</div>
                     <div style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8}}>
                       <img src={prod.foto} alt={prod.nome} style={{width: 48, height: 48, borderRadius: 8, objectFit: 'cover', background: '#fff'}} />
                       <div style={{flex: 1}}>
-                        <div style={{height: 10, background: '#e0e0e0', borderRadius: 6, overflow: 'hidden', marginBottom: 4}}>
-                          <div style={{width: progresso+'%', height: '100%', background: progresso===100 ? '#a86b2d' : '#ffe0b2', transition: 'width 0.4s'}}></div>
+                        <div style={{height: 10, background: '#444', borderRadius: 6, overflow: 'hidden', marginBottom: 4}}>
+                          <div style={{width: progresso+'%', height: '100%', background: progresso===100 ? '#FFB921' : '#666', transition: 'width 0.4s'}}></div>
                         </div>
-                        <div style={{fontSize: 13, color: '#a86b2d'}}>{progresso}% para trocar</div>
+                        <div style={{fontSize: 13, color: '#ccc'}}>{progresso}% para trocar</div>
                       </div>
                     </div>
-                    <button style={{background: '#a86b2d', color: '#fff', border: 'none', borderRadius: 8, padding: '8px 18px', fontWeight: 600, fontSize: 15, cursor: progresso===100 ? 'pointer' : 'not-allowed', opacity: progresso===100 ? 1 : 0.6}} disabled={progresso!==100}>
+                    <button style={{background: '#FFB921', color: '#000', border: 'none', borderRadius: 8, padding: '8px 18px', fontWeight: 600, fontSize: 15, cursor: progresso===100 ? 'pointer' : 'not-allowed', opacity: progresso===100 ? 1 : 0.6}} disabled={progresso!==100}>
                       Trocar por {meta} copinhos
                     </button>
                   </div>
@@ -131,7 +132,7 @@ export function Header() {
               })}
             </div>
             
-            <button style={{marginTop: 24, background: 'none', border: 'none', color: '#a86b2d', fontWeight: 600, fontSize: 16, cursor: 'pointer'}} onClick={() => setRewardsOpen(false)}>Fechar</button>
+            <button style={{marginTop: 24, background: 'none', border: 'none', color: '#FFB921', fontWeight: 600, fontSize: 16, cursor: 'pointer'}} onClick={() => setRewardsOpen(false)}>Fechar</button>
           </div>
         </div>
       )}
@@ -143,6 +144,7 @@ export function Header() {
             <Link className="mobile-link" href="/copos" onClick={() => setMenuOpen(false)}>Copos</Link>
             <Link className="mobile-link" href="/filtros" onClick={() => setMenuOpen(false)}>Filtros</Link>
             <Link className="mobile-link" href="/conta" onClick={() => setMenuOpen(false)}>Conta</Link>
+            <Link className="mobile-link coffee-plus-mobile" href="/coffee-plus" onClick={() => setMenuOpen(false)}>Coffee+</Link>
           </div>
         )}
       </header>

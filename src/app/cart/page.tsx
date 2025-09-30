@@ -13,7 +13,7 @@ export default function Cart() {
   const total = cart.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
 
   return (
-    <div className="container">
+    <>
       <Header />
       <div className="cart-container">
         <div className="cart-main">
@@ -92,7 +92,7 @@ export default function Cart() {
                     className="texto-destaque-card-pontos"
                     style={{ display: 'inline-flex', alignItems: 'center', whiteSpace: 'nowrap', gap: 4 }}
                   >
-                    1100 copinhos!<BiCoffeeTogo size={20} />
+                    100 copinhos!<BiCoffeeTogo size={20} />
                   </span>
                 </h3>
                 <p>
@@ -104,6 +104,6 @@ export default function Cart() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

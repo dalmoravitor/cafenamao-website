@@ -1,9 +1,10 @@
 /* Modal de Recompensas */
 .rewards-modal {
   width: 70vw !important;
-  background: #fff;
+  background: #1b1a1a;
+  border: 1px solid #333;
   border-radius: 18px;
-  box-shadow: 0 4px 32px #0002;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
   padding: 32px 24px 24px 24px;
   overflow-y: auto;
   max-height: 90vh;
@@ -21,16 +22,53 @@
 }
 .rewards-modal::-webkit-scrollbar {
   width: 8px;
-  background: #eee;
 }
 .rewards-modal::-webkit-scrollbar-thumb {
-  background: #e0e0e0;
+  background: #333;
   border-radius: 8px;
+}
+.rewards-modal::-webkit-scrollbar-track {
+  background: #1b1a1a;
 }
 .link-hover:hover {
     font-size: 22px;
   color: #FFB921; /* exemplo de cor para hover */
   transition: color 0.6s;
+}
+
+/* Destaque especial para Coffee+ */
+.coffee-plus-link {
+  color: #FFB921 !important;
+  font-weight: bold;
+  position: relative;
+}
+
+.coffee-plus-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFB921;
+  border-radius: 1px;
+}
+
+.coffee-plus-link:hover {
+  color: #fff !important;
+  background: #FFB921;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.coffee-plus-mobile {
+  color: #FFB921 !important;
+  font-weight: bold;
+  border: 1px solid #FFB921;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 8px;
 }
 
 .header-container {
@@ -318,10 +356,41 @@
     height: 70vh;
     padding: 16px 4px;
   }
+
+  .logo-text {
+    display: none;
+  }
   .modal-produtos-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     justify-items: center;
+  }
+}
+
+/* Estilos responsivos para modal de recompensas */
+.rewards-cards-container {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .rewards-modal {
+    padding: 16px !important;
+    width: 95vw !important;
+  }
+  
+  .rewards-cards-container {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  
+  .rewards-cards-container > div {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  
+  .minitutorial {
+    margin: 16px auto 16px !important;
+    padding: 16px !important;
   }
 }
 
@@ -336,5 +405,28 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     justify-items: center;
+  }
+  
+  .rewards-modal {
+    padding: 12px !important;
+    width: 98vw !important;
+  }
+  
+  .rewards-cards-container {
+    gap: 12px !important;
+  }
+  
+  .minitutorial {
+    margin: 12px auto 12px !important;
+    padding: 12px !important;
+    font-size: 14px;
+  }
+  
+  .minitutorial h2 {
+    font-size: 18px !important;
+  }
+  
+  .minitutorial ol {
+    font-size: 14px !important;
   }
 }

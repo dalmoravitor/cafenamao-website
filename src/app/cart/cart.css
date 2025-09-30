@@ -1,11 +1,26 @@
-.cart-container {
+/* Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
+  overflow-x: hidden;
+}
+
+.cart-container {
+  width: 100vw;
   min-height: 100vh;
   background: #1b1a1a;
   color: #fff;
-  padding: 60px 0 40px 0;
+  padding: 60px 20px 40px 20px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .cart-title {
@@ -23,6 +38,7 @@
   flex-direction: column;
   gap: 18px;
   margin-bottom: 32px;
+  box-sizing: border-box;
 }
 
 .cart-item {
@@ -124,6 +140,8 @@
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .container-right {
@@ -131,12 +149,13 @@
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   padding: 32px 24px;
-  width: 50%;
   width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 18px;
+  box-sizing: border-box;
 }
 
 .container-right-title {
@@ -200,17 +219,16 @@
   background: #222;
   margin-top: 32px;
   border-radius: 20px;
-  padding: 12px 40px;
+  padding: 20px;
   margin-bottom: 32px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
-  align-self: center;
   align-items: center;
   justify-content: center;
-  height: auto;
   width: 100%;
-  gap: 16;
+  gap: 16px;
+  box-sizing: border-box;
 }
 
 .card-pontos h3 {
@@ -258,90 +276,124 @@
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .cart-container {
-    overflow-x: hidden;
-
-    margin: 0 8px;
+    padding: 40px 10px 20px 10px;
+  }
+  
+  .cart-main {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 32px 0 12px 0;
+    gap: 30px;
+    padding: 0;
   }
-  .cart-list, .cart-total {
+  
+  .cart-list {
+    max-width: 100%;
+  }
+  
+  .container-right {
+    max-width: 100%;
     width: 100%;
-  }
-  .cart-item {
-    flex-direction: row;
-    align-self: center;
-    gap: 10px;
-    width: 100%;
-    padding: 12px 6px;
-  }
-  .cart-item-img {
-    width: 48px;
-    height: 48px;
-  }
-  .cart-finalizar {
-    width: 90vw;
-    font-size: 16px;
-    padding: 12px 0;
+    padding: 24px 16px;
   }
 }
 
 @media (max-width: 700px) {
   .cart-container {
-        overflow-x: hidden;
-
-    padding: 60px 0 20px 0;
+    padding: 30px 5px 20px 5px;
   }
-  .cart-list, .cart-total {
-    max-width: 98vw;
+  
+  .cart-main {
+    gap: 20px;
+    padding: 0;
   }
 
   .cart-title {
     font-size: 28px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
+  
   .cart-item {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 12px 6px;
+    padding: 14px 12px;
+    gap: 12px;
   }
+  
   .cart-item-img {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
   }
-  .cart-finalizar {
-    width: 90vw;
-    font-size: 16px;
-    padding: 12px 0;
+  
+  .container-right {
+    padding: 20px 12px;
+  }
+  
+  .cart-item-remove {
+    font-size: 13px;
+    padding: 5px 10px;
   }
 }
 
-@media (max-width: 900px) {
-
-
+@media (max-width: 600px) {
   .cart-container {
-        overflow-x: hidden;
-
+    padding: 20px 0 16px 0;
+    width: 100vw;
   }
+  
   .cart-main {
-    overflow-x: hidden;
-    padding: 30px;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 100%;
-  }
-  .container-right {
-    max-width: 100%;
-    min-width: 0;
-    padding: 18px 8px;
-    margin-bottom: 16px;
+    gap: 16px;
+    padding: 0 8px;
+    width: 100%;
   }
 
-  .cart-item-remove {
-    margin: 4px 10px;
+  .cart-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .cart-item {
+    padding: 12px 8px;
+    gap: 10px;
+    margin: 0 8px;
+  }
+  
+  .cart-item-img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .cart-item-nome {
+    font-size: 16px;
+  }
+  
+  .cart-item-preco,
+  .cart-item-quantidade {
+    font-size: 14px;
+  }
+  
+  .container-right {
+    padding: 16px 8px;
+    margin: 0 8px;
+  }
+  
+  .container-right-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  
+  .card-pontos {
+    padding: 16px 12px;
+    margin: 20px 8px 0 8px;
+  }
+  
+  .card-pontos h3 {
+    font-size: 18px;
+  }
+  
+  .botaoPontos {
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }

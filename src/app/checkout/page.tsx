@@ -10,7 +10,7 @@ export default function Checkout() {
   const [paymentMethod, setPaymentMethod] = useState("cartao");
 
   return (
-    <div className="container">
+    <>
       <Header />
       <div className="checkout-container">
           <main className="checkout-main">
@@ -114,6 +114,6 @@ export default function Checkout() {
             </section>
           </main>
       </div>
-    </div>
+    </>
   );
 }
